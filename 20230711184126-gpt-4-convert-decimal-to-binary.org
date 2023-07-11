@@ -1,0 +1,417 @@
+:PROPERTIES:
+:ID:       20230711184124.839979
+:mtime:    20230711232134 20230711184250
+:ctime:    20230711184126
+:END:
+#+title: GPT-4: Convert Decimal to Binary
+#+filetags: :prompt:gpt4:
+
+10101010110011101
+
+
+
+* Attempt 1
+
+#+begin_ai markdown :model gpt-4 :temperature 1
+[ME]: Please convert 87453 to binary:
+
+[AI]: The binary equivalent of 87453 is 10101010010011101.
+
+#+end_ai
+
+* Attempt 2
+
+
+#+begin_ai markdown :model gpt-4 :temperature 1
+[ME]: Please convert 87453 to binary in a step by step way:
+
+[AI]: Step 1: Find the biggest power of 2.
+
+In this case, the biggest power of 2 less than 87453 is 2^16 which is 65536.
+
+Step 2: Subtract this from the number and write down the remainder.
+
+87453-65536 = 21917
+
+The binary digit for the 2^16 place is 1.
+
+Step 3: Repeat steps above.
+
+The next biggest power of 2 less than 21917 is 2^14 which is 16384.
+
+21917-16384 = 5533
+
+The binary digit for the 2^14 place is 1.
+
+Step 4: Continue this process.
+
+The next biggest power of 2 less than 5533 is 2^12 which is 4096.
+
+5533-4096 = 1437
+
+The binary digit
+
+[AI]: for the 2^12 place is 1.
+
+Step 5: The next biggest power of 2 less than 1437 is 2^10 which is 1024.
+
+1437-1024 = 413
+
+The binary digit for the 2^10 place is 1.
+
+Step 6: The next biggest power of 2 less than 413 is 2^8 which is 256.
+
+413-256 = 157
+
+The binary digit for the 2^8 place is 1.
+
+Step 7: The next biggest power of 2 less than 157 is 2^7 which is 128.
+
+157-128 = 29
+
+The binary digit for the 2^7 place is 1.
+
+Step 8: The next biggest power of 2 less than 29 is 2^4 which is 16.
+
+29-16 = 13
+
+The binary digit for the 2^4 place is 1.
+
+Step 9: The next biggest power of 2 less than 13 is 2^3 which is 8.
+
+13-8 = 5
+
+The binary digit for the 2^3 place is 1.
+
+Step 10: The next biggest power of 2 less than 5 is 2^2 which is 4.
+
+5-4 = 1
+
+The binary digit for the 2^2 place is 1.
+
+Then the biggest power 2 less than 1 is 2^0 which is 1, and we know that 1-1 = 0. The binary digit for this place is also 1.
+
+Step 11: Any places not included in the steps should be filled with 0.
+
+Therefore, 87453 in binary is 1010101011110101.
+
+[ME]:
+#+end_ai
+
+
+* Attempt 3
+
+#+begin_ai markdown :model gpt-4 :temperature 1
+[ME]: Please convert 87453 to binary in a step by step way, do remember to write down the whole binary representation in each step:
+
+[AI]: Step one: Identify the largest power of 2 within 87453. The largest power of 2 within 87453 is 2^16 = 65536.
+
+Step two: Subtract the largest power of 2 from 87453 to obtain the remainder. 87453 - 65536 = 21917.
+
+Step three: Find the biggest power of 2 that can be subtracted from the remainder. This is 2^14 = 16384.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14) then zeros for 2^13 through 2^0, written as 10100000000000000
+
+Step four: Subtract the biggest power of 2 from current remainder. This is 21917 - 16384 = 5533.
+
+Step five: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^12 = 4096.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12) then zeros for 2^11 through 2^0, written as 10101000000000000
+
+Step six: Subtract the biggest power of 2 from current remainder. This is 5533 - 4096 = 1437.
+
+Step seven: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^10 = 1024.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10) then zeros for 2^9 through 2^0, written as 10101010000000000
+
+Step eight: Subtract the biggest power of 2 from current remainder. This is 1437 - 1024 = 413.
+
+Step nine: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^8 = 256.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10), 0 (2^9), 1 (2^8) then zeros for 2^7 through 2^0, written as 10101010100000000
+
+Step ten: Subtract the biggest power of 2 from current remainder. This is 413 - 256 = 157.
+
+Step eleven: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^7 = 128.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10), 0 (2^9), 1 (2^8), 1 (2^7) then zeros for 2^6 through 2^0, written as 10101010110000000
+
+Step twelve: Subtract the biggest power of 2 from current remainder. This is 157 - 128 = 29.
+
+Step thirteen: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^4 = 16.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10), 0 (2^9), 1 (2^8), 1 (2^7), 0 (2^6), 0 (2^5), 1 (2^4) then zeros for 2^3 through 2^0, written as 10101010110001000000
+
+Step fourteen: Subtract the biggest power of 2 from current remainder. This is 29 - 16 = 13.
+
+Step fifteen: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^3 = 8.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10), 0 (2^9), 1 (2^8), 1 (2^7), 0 (2^6), 0 (2^5), 1 (2^4), 1 (2^3) then zeros for 2^2 through 2^0, written as 10101010110001010000
+
+Step sixteen: Subtract the biggest power of 2 from current remainder. This is 13 - 8 = 5.
+
+Step seventeen: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^2 = 4.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10), 0 (2^9), 1 (2^8), 1 (2^7), 0 (2^6), 0 (2^5), 1 (2^4), 1 (2^3), 1 (2^2) then zeros for 2^1 and 2^0, written as 10101010110001011000
+
+Step eighteen: Subtract the biggest power of 2 from current remainder. This is 5 - 4 = 1.
+
+Step nineteen: Find the biggest power of 2 that can be subtracted from the new remainder. This is 2^0 = 1.
+
+Here's the binary representation so far: 1 (2^16), 0 (2^15), 1 (2^14), 0 (2^13), 1 (2^12), 0 (2^11), 1 (2^10), 0 (2^9), 1 (2^8), 1 (2^7), 0 (2^6), 0 (2^5), 1 (2^4), 1 (2^3), 1 (2^2), 0 (2^1), 1 (2^0), written as 10101010110001011001
+
+So, the binary representation of 87453 is 10101010110001011001.
+
+[ME]:
+#+end_ai
+
+* Attempt 4
+
+#+begin_ai markdown :model gpt-4-0613 :temperature 0.0
+[ME]: Let's try convert 87453 to binary in a step by step way, do remember to write down the whole binary phrase in each step:
+
+[AI]: 1. The largest power of 2 less than 87453 is 2^16 = 65536. So, the 17th digit from the right in the binary representation is 1. Subtract 65536 from 87453 to get 21917. So, the binary representation is 10000000000000000 so far.
+
+2. The largest power of 2 less than 21917 is 2^14 = 16384. So, the 15th digit from the right in the binary representation is 1. Subtract 16384 from 21917 to get 5533. So, the binary representation is 10100000000000000 so far.
+
+3. The largest power of 2 less than 5533 is 2^12 = 4096. So, the 13th digit from the right in the binary representation is 1. Subtract 4096 from 5533 to get 1437. So, the binary representation is 10101000000000000 so far.
+
+4. The largest power of 2 less than 1437 is 2^10 = 1024. So, the 11th digit from the right in the binary representation is 1. Subtract 1024 from 1437 to get 413. So, the binary representation is 10101010000000000 so far.
+
+5. The largest power of 2 less than 413 is 2^8 = 256. So, the 9th digit from the right in the binary representation is 1. Subtract 256 from 413 to get 157. So, the binary representation is 10101010100000000 so far.
+
+6. The largest power of 2 less than 157 is 2^7 = 128. So, the 8th digit from the right in the binary representation is 1. Subtract 128 from 157 to get 29. So, the binary representation is 10101010110000000 so far.
+
+7. The largest power of 2 less than 29 is 2^4 = 16. So, the 5th digit from the right in the binary representation is 1. Subtract 16 from 29 to get 13. So, the binary representation is 10101010110100000 so far.
+
+8. The largest power of 2 less than 13 is 2^3 = 8. So, the 4th digit from the right in the binary representation is 1. Subtract 8 from 13 to get 5. So, the binary representation is 10101010110110000 so far.
+
+9. The largest power of 2 less than 5 is 2^2 = 4. So, the 3rd digit from the right in the binary representation is 1. Subtract 4 from 5 to get 1. So, the binary representation is 10101010110111000 so far.
+
+10. The largest power of 2 less than 1 is 2^0 = 1. So, the 1st digit from the right in the binary representation is 1. Subtract 1 from 1 to get 0. So, the binary representation is 10101010110111001.
+
+So, 87453 in binary is 10101010110111001.
+
+[ME]:
+#+end_ai
+
+
+#+begin_ai markdown :model gpt-4-0613 :temperature 0.5
+[ME]: Let's try convert 87453 to binary in a step by step way, do remember to write down the whole binary representation in each step:
+
+[AI]: 1. The biggest power of 2 that fits into 87453 is 2^16 (65536). So, we write down a 1 for the 2^16 place and subtract 65536 from our number: 87453 - 65536 = 21917. So far, our binary number is 10000000000000000.
+
+2. The biggest power of 2 that fits into 21917 is 2^14 (16384). So, we write down a 1 for the 2^14 place and subtract 16384 from our number: 21917 - 16384 = 5533. So far, our binary number is 10100000000000000.
+
+3. The biggest power of 2 that fits into 5533 is 2^12 (4096). So, we write down a 1 for the 2^12 place and subtract 4096 from our number: 5533 - 4096 = 1437. So far, our binary number is 10101000000000000.
+
+4. The biggest power of 2 that fits into 1437 is 2^10 (1024). So, we write down a 1 for the 2^10 place and subtract 1024 from our number: 1437 - 1024 = 413. So far, our binary number is 10101010000000000.
+
+5. The biggest power of 2 that fits into 413 is 2^8 (256). So, we write down a 1 for the 2^8 place and subtract 256 from our number: 413 - 256 = 157. So far, our binary number is 10101010100000000.
+
+6. The biggest power of 2 that fits into 157 is 2^7 (128). So, we write down a 1 for the 2^7 place and subtract 128 from our number: 157 - 128 = 29. So far, our binary number is 10101010110000000.
+
+7. The biggest power of 2 that fits into 29 is 2^4 (16). So, we write down a 1 for the 2^4 place and subtract 16 from our number: 29 - 16 = 13. So far, our binary number is 10101010110100000.
+
+8. The biggest power of 2 that fits into 13 is 2^3 (8). So, we write down a 1 for the 2^3 place and subtract 8 from our number: 13 - 8 = 5. So far, our binary number is 10101010110110000.
+
+9. The biggest power of 2 that fits into 5 is 2^2 (4). So, we write down a 1 for the 2^2 place and subtract 4 from our number: 5 - 4 = 1. So far, our binary number is 10101010110111000.
+
+10. The biggest power of 2 that fits into 1 is 2^0 (1). So, we write down a 1 for the 2^0 place and subtract 1 from our number: 1 - 1 = 0. Our final binary number is 10101010110111001.
+
+[ME]:
+#+end_ai
+
+
+#+begin_ai markdown :model gpt-4 :temperature 0.5
+[SYS]: You are ChatGPT, a large language model trained by OpenAI.
+Knowledge cutoff: 2021-09
+Current date: 2023-07-11
+[ME]: Let's try convert 87453 to binary in a step by step way, do remember to write down the whole binary phrase in each step:
+
+[AI]: Sure, let's convert the decimal number 87453 to binary. The process involves dividing the number by 2 and recording the remainder until we reach 0. The binary representation is then read from bottom to top (i.e., the last remainder is the first binary digit).
+
+Here's the step-by-step process:
+
+1. 87453 divided by 2 is 43726 remainder 1. So, the binary number so far is: 1
+2. 43726 divided by 2 is 21863 remainder 0. So, the binary number so far is: 01
+3. 21863 divided by 2 is 10931 remainder 1. So, the binary number so far is: 101
+4. 10931 divided by 2 is 5465 remainder 1. So, the binary number so far is: 1101
+5. 5465 divided by 2 is 2732 remainder 1. So, the binary number so far is: 11101
+6. 2732 divided by 2 is 1366 remainder 0. So, the binary number so far is: 011101
+7. 1366 divided by 2 is 683 remainder 0. So, the binary number so far is: 0011101
+8. 683 divided by 2 is 341 remainder 1. So, the binary number so far is: 10011101
+9. 341 divided by 2 is 170 remainder 1. So, the binary number so far is: 110011101
+10. 170 divided by 2 is 85 remainder 0. So, the binary number so far is: 0110011101
+11. 85 divided by 2 is 42 remainder 1. So, the binary number so far is: 10110011101
+12. 42 divided by 2 is 21 remainder 0. So, the binary number so far is: 010110011101
+13. 21 divided by 2 is 10 remainder 1. So, the binary number so far is: 1010110011101
+14. 10 divided by 2 is 5 remainder 0. So, the binary number so far is: 01010110011101
+15. 5 divided by 2 is 2 remainder 1. So, the binary number so far is: 101010110011101
+16. 2 divided by 2 is 1 remainder 0. So, the binary number so far is: 0101010110011101
+17. 1 divided by 2 is 0 remainder 1. So, the binary number so far is: 10101010110011101
+
+So, the binary representation of 87453 is 10101010110011101.
+
+
+[ME]:
+#+end_ai
+
+#+begin_ai markdown :model gpt-4 :temperature 1
+[SYS]: You are a helpful assistant.
+[ME]: Let's try convert 87453 to binary in a step by step way, do remember to write down the whole binary phrase in each step:
+
+[AI]: Sure, let's break this down:
+
+1. Divide the number by 2, list the integer quotient (which will be used in the next step) and the remainder.
+87453 / 2 = 43726 (integer quotient) Remainder = 1
+
+2. Continue with the integer quotient from the prior calculation.
+43726 / 2 = 21863 Remainder = 0
+Note, the binary representation so far is 01
+
+3. Continue with the integer quotient from the prior calculation.
+21863 / 2 = 10931 Remainder = 1
+Note, the binary representation so far is 101
+
+4. Continue with the integer quotient from the prior calculation.
+10931 / 2 = 5465 Remainder = 1
+Note, the binary representation so far is 1101
+
+5. Continue with the integer quotient from the prior calculation.
+5465 / 2 = 2732 Remainder = 1
+Note, the binary representation so far is 11101
+
+6. Continue with the integer quotient from the prior calculation.
+2732 / 2 = 1366 Remainder = 0
+Note, the binary representation so far is 011101
+
+7. Continue with the integer quotient from the prior calculation.
+1366 / 2 = 683 Remainder = 0
+Note, the binary representation so far is 0011101
+
+8. Continue with the integer quotient from the prior calculation.
+683 / 2 = 341 Remainder = 1
+Note, the binary representation so far is 10011101
+
+9. Continue with the integer quotient from the prior calculation.
+341 / 2 = 170 Remainder = 1
+Note, the binary representation so far is 110011101
+
+10. Continue with the integer quotient from the prior calculation.
+170 / 2 = 85 Remainder = 0
+Note, the binary representation so far is 0110011101
+
+11. Continue with the integer quotient from the prior calculation.
+85 / 2 = 42 Remainder = 1
+Note, the binary representation so far is 10110011101
+
+12. Continue with the integer quotient from the prior calculation.
+42 / 2 = 21 Remainder = 0
+Note, the binary representation so far is 010110011101
+
+13. Continue with the integer quotient from the prior calculation.
+21 / 2 = 10 Remainder = 1
+Note, the binary representation so far is 1010110011101
+
+14. Continue with the integer quotient from the prior calculation.
+10 / 2 = 5 Remainder = 0
+Note, the binary representation so far is 01010110011101
+
+15. Continue with the integer quotient from the prior calculation.
+5 / 2 = 2 Remainder = 1
+Note, the binary representation so far is 101010110011101
+
+16. Continue with the integer quotient from the prior calculation.
+2 / 2 = 1 Remainder = 0
+Note, the binary representation so far is 0101010110011101
+
+17. Continue with the integer quotient from the prior calculation.
+1 / 2 = 0 Remainder = 1
+The binary representation so far is 10101010110011101
+
+Since the quotient is now 0, the process ends here. But remember, binary numbers are written in reverse order of the remainders. So, after reversing the binary representation, we get the final binary number:
+
+11001110101010101
+
+[ME]:
+#+end_ai
+
+#+begin_ai markdown :model gpt-4 :temperature 0.5
+[SYS]: You are ChatGPT, a large language model trained by OpenAI.
+[ME]: Let's try convert 87453 to binary in a step by step way, do remember to write down the whole binary phrase in each step:
+
+[AI]: Sure, let's convert the decimal number 87453 into binary. We'll do this by continually dividing by 2 and keeping track of the remainders.
+
+Step 1:
+87453 / 2 = 43726 remainder 1
+Binary: 1
+
+Step 2:
+43726 / 2 = 21863 remainder 0
+Binary: 01
+
+Step 3:
+21863 / 2 = 10931 remainder 1
+Binary: 101
+
+Step 4:
+10931 / 2 = 5465 remainder 1
+Binary: 1101
+
+Step 5:
+5465 / 2 = 2732 remainder 1
+Binary: 11101
+
+Step 6:
+2732 / 2 = 1366 remainder 0
+Binary: 011101
+
+Step 7:
+1366 / 2 = 683 remainder 0
+Binary: 0011101
+
+Step 8:
+683 / 2 = 341 remainder 1
+Binary: 10011101
+
+Step 9:
+341 / 2 = 170 remainder 1
+Binary: 110011101
+
+Step 10:
+170 / 2 = 85 remainder 0
+Binary: 0110011101
+
+Step 11:
+85 / 2 = 42 remainder 1
+Binary: 10110011101
+
+Step 12:
+42 / 2 = 21 remainder 0
+Binary: 010110011101
+
+Step 13:
+21 / 2 = 10 remainder 1
+Binary: 1010110011101
+
+Step 14:
+10 / 2 = 5 remainder 0
+Binary: 01010110011101
+
+Step 15:
+5 / 2 = 2 remainder 1
+Binary: 101010110011101
+
+Step 16:
+2 / 2 = 1 remainder 0
+Binary: 0101010110011101
+
+Step 17:
+1 / 2 = 0 remainder 1
+Binary: 10101010110011101
+
+So, the binary representation of decimal 87453 is 10101010110011101.
+
+[ME]:
+#+end_ai
