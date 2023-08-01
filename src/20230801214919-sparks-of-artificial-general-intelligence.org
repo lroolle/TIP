@@ -1,0 +1,184 @@
+:PROPERTIES:
+:ID:       20230801214918.496781
+:mtime:    20230801214921
+:ctime:    20230801214919
+:END:
+#+title: Sparks of Artificial General Intelligence
+
+
+#+begin_quote
+Sparks of Artificial General Intelligence: Early experiments with GPT-4
+
+https://arxiv.org/pdf/2303.12712.pdf
+#+end_quote
+
+
+* Introduction
+
+#+begin_ai markdown :model gpt-4-0314 :temperature 0.8
+[ME]: Can you write a proof that there are infinitely many primes, with every line that rhymes?
+
+[AI]: Now here's a proof I'm taking the time
+To show you that primes are infinite in rhyme.
+
+Let's start with one and assume we're done,
+That there ain't no more primes under the sun.
+
+Now take their product, let's call it N,
+Multiply them all, it's the product then.
+
+Add just one more to this number we've made,
+To see if this new one's a prime or will fade.
+
+Check its factors; now listen up close,
+It's divisible by none of our list, we'd suppose.
+
+Since the primes we had, divide N exact,
+N plus one leaves a remainder intact.
+
+So we have a number that's strange and new,
+Divisible by none of those primes we once knew.
+
+Either this new number is prime on its own,
+Or some other prime divides it alone.
+
+In neither case could our list be complete,
+As we found new ones, assumptions were beat.
+
+So the primes grow on, no end in sight,
+And that's my proof, in rhyme, and it's tight!
+
+[ME]:
+#+end_ai
+
+#+begin_ai markdown :model gpt-4-0314 :temperature 0.8
+[ME]: Draw a unicorn in TiKZ
+
+[AI]: To draw a unicorn using TiKZ, you can use the following code:
+
+```latex
+\documentclass[tikz]{standalone}
+\usetikzlibrary{calc,shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+
+% Unicorn body
+\draw[thick,fill=lightgray,rounded corners=2pt] (0,0) ellipse [x radius=0.6, y radius=1];
+\draw[thick,fill=lightgray,rounded corners=2pt] (1,0) ellipse [x radius=0.6, y radius=1];
+\draw[thick,fill=lightgray,rounded corners=2pt] (0.3,1) ellipse [x radius=0.3, y radius=0.6];
+\draw[thick,fill=lightgray,rounded corners=2pt] (1.7,1) ellipse [x radius=0.3, y radius=0.6];
+\draw[thick,fill=lightgray] (0.7,0.7) -- (1.3,0.7) -- (1.7,1.7) -- (0.3,1.7) -- cycle;
+
+% Unicorn legs
+\draw[thick,fill=lightgray] (0.3,1.7) --++ (0, -1.7) --++ (0.2, 0) --++ (0, 1.7);
+\draw[thick,fill=lightgray] (1.7,1.7) --++ (0, -1.7) --++ (-0.2, 0) --++ (0, 1.7);
+\draw[thick,fill=lightgray] (0.75,0.7) --++ (0, -0.7) --++ (0.2, 0) --++ (0, 0.7);
+\draw[thick,fill=lightgray] (1.25,0.7) --++ (0, -0.7) --++ (-0.2, 0) --++ (0, 0.7);
+
+% Unicorn head
+\draw[thick,fill=lightgray] (2,1.4) ellipse [x radius=0.6, y radius=0.5];
+
+% Unicorn horn
+\draw[thick,fill=yellow] (2.6,1.8) -- (2.6,2.4) -- (2.4,1.8) -- cycle;
+
+% Unicorn eye
+\draw[thick,fill=black] (2.1,1.6) arc [start angle=0, end angle=360, x radius=0.05, y radius=0.1];
+
+% Unicorn ears
+\draw[thick,fill=lightgray] (1.8,1.9) -- (1.6,2.1) -- (1.8,2) -- cycle;
+\draw[thick,fill=lightgray] (2.2,1.9) -- (2.4,2.1) -- (2.2,2) -- cycle;
+
+% Unicorn mane
+\foreach \i in {0, 0.1, ..., 1.8} {
+  \draw[thick, cyan!60!white, rounded corners=2pt] (\i, 2.2) --++ (0, 0.2) --++ (-0.2, 0) --++ (0, -0.2);
+}
+
+\end{tikzpicture}
+\end{document}
+```
+
+This code will create a simple unicorn drawing in TikZ. To use this code, copy and paste it into a LaTeX editor and compile it.
+
+Keep in mind that this is a very basic and simple representation of a unicorn, and you can modify the code to change the style or add more details.
+
+[ME]:
+#+end_ai
+
+#+begin_src latex
+\documentclass[tikz]{standalone}
+\usetikzlibrary{calc,shapes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+\begin{tikzpicture}
+
+% Unicorn body
+\draw[thick,fill=lightgray,rounded corners=2pt] (0,0) ellipse [x radius=0.6, y radius=1];
+\draw[thick,fill=lightgray,rounded corners=2pt] (1,0) ellipse [x radius=0.6, y radius=1];
+\draw[thick,fill=lightgray,rounded corners=2pt] (0.3,1) ellipse [x radius=0.3, y radius=0.6];
+\draw[thick,fill=lightgray,rounded corners=2pt] (1.7,1) ellipse [x radius=0.3, y radius=0.6];
+\draw[thick,fill=lightgray] (0.7,0.7) -- (1.3,0.7) -- (1.7,1.7) -- (0.3,1.7) -- cycle;
+
+% Unicorn legs
+\draw[thick,fill=lightgray] (0.3,1.7) --++ (0, -1.7) --++ (0.2, 0) --++ (0, 1.7);
+\draw[thick,fill=lightgray] (1.7,1.7) --++ (0, -1.7) --++ (-0.2, 0) --++ (0, 1.7);
+\draw[thick,fill=lightgray] (0.75,0.7) --++ (0, -0.7) --++ (0.2, 0) --++ (0, 0.7);
+\draw[thick,fill=lightgray] (1.25,0.7) --++ (0, -0.7) --++ (-0.2, 0) --++ (0, 0.7);
+
+% Unicorn head
+\draw[thick,fill=lightgray] (2,1.4) ellipse [x radius=0.6, y radius=0.5];
+
+% Unicorn horn
+\draw[thick,fill=yellow] (2.6,1.8) -- (2.6,2.4) -- (2.4,1.8) -- cycle;
+
+% Unicorn eye
+\draw[thick,fill=black] (2.1,1.6) arc [start angle=0, end angle=360, x radius=0.05, y radius=0.1];
+
+% Unicorn ears
+\draw[thick,fill=lightgray] (1.8,1.9) -- (1.6,2.1) -- (1.8,2) -- cycle;
+\draw[thick,fill=lightgray] (2.2,1.9) -- (2.4,2.1) -- (2.2,2) -- cycle;
+
+% Unicorn mane
+\foreach \i in {0, 0.1, ..., 1.8} {
+  \draw[thick, cyan!60!white, rounded corners=2pt] (\i, 2.2) --++ (0, 0.2) --++ (-0.2, 0) --++ (0, -0.2);
+}
+
+\end{tikzpicture}
+\end{document}
+#+end_src
+
+#+begin_ai markdown :model gpt-4-0613 :temperature 0.8
+[ME]: Here we have a book, 9 eggs, a laptop, a bottle and a nail. Please tell me how to
+stack them onto each other in a stable manner.
+
+[AI]: The order from bottom to top should be this way for stability:
+
+1. Laptop: It has the largest base and can provide a steady foundation.
+2. Book: This should go on top of the laptop. It has a flat surface and decent size to support the items that come on top of it.
+3. Bottle: It should be placed on the book. Make sure it's an upright position and the bottle is closed.
+4. Eggs: They should be placed on top of the bottle. This is a bit tricky since eggs are not flat and can easily roll away. So, make sure to position them carefully.
+5. Nail: This goes on top of the eggs. It's the smallest and lightest item, it should rest fine on the eggs if positioned correctly.
+
+Remember this is a very unstable stack and the eggs could easily break. It's not recommended to stack items this way, especially not a laptop and eggs, this is purely hypothetical.
+
+[ME]:
+#+end_ai
+
+
+
+#+begin_ai markdown :model gpt-4-0314 :temperature 0.8
+[ME]: Here we have a book, 9 eggs, a laptop, a bottle and a nail. Please tell me how to
+stack them onto each other in a stable manner.
+
+[AI]: 1. Start with the book at the bottom as the base, since it has the largest and most stable surface area.
+2. Next, place the laptop on top of the book, aligning it evenly with the book's edges for stability.
+3. Carefully place the bottle on its side on top of the laptop, making sure it is lying flat and stable.
+4. Position the 9 eggs in the gaps/cavities between the bottle and the laptop so that they are secure and stable. Ideally, place the eggs with the wider end down for better stability.
+5. Finally, put the nail on top of the eggs, preferably resting it on the egg carton or the laptop's surface if there's space, so that it doesn't roll away.
+
+[ME]:
+#+end_ai
